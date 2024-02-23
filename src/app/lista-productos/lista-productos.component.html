@@ -1,0 +1,45 @@
+
+<h2>Buscar Productos</h2>
+<form (ngSubmit)="buscarProductos()">
+  <div class="form-group">
+    <label for="buscar">Buscar:</label>
+    <input type="text" class="form-control" id="buscar" [(ngModel)]="terminoBusqueda" name="terminoBusqueda">
+  </div>
+  <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+<!-- Mensaje de éxito -->
+<div *ngIf="mensajeExito" class="alert alert-success" role="alert">
+  {{ mensajeExito }}
+</div>
+
+<h2 *ngIf="resultados.length > 0">Resultados de la Búsqueda</h2>
+<table *ngIf="resultados.length > 0" class="table table-strip">
+  <thead class="table-dark">
+    <tr>
+      <th>Codigo</th>
+      <th>Descripción</th>
+      <th>Modelo</th>
+      <th>Marca</th>
+      <th>Precio compra</th>
+      <th>Precio venta</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of resultados">
+      <td>{{producto.sku}}</td>
+      <td>{{producto.descripcion}}</td>
+      <td>{{producto.modelo}}</td>
+      <td>{{producto.marca}}</td>
+      <td>{{producto.precio | currency}}</td>
+      <td>{{producto.precioVenta | currency}}</td>
+      <td>
+        <div class="btn-group">
+          <button (click)="actualizarProducto(producto.sku)" class="btn btn-info">Editar</button>
+          <button (click)="confirmarEliminarProducto(producto.sku)" class="btn btn-danger">Eliminar</button>
+        </div>  
+      </td>
+    </tr>
+  </tbody>
+</table>

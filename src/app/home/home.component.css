@@ -1,0 +1,55 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 36px;
+    color: #333;
+  }
+  
+  .sub-heading {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .offer {
+    margin-bottom: 30px;
+  }
+  
+  .offer img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .offer h3 {
+    margin-top: 15px;
+    color: #007bff;
+  }
+  
+  .offer p {
+    color: #666;
+  }
+  
+  .services {
+    margin-top: 50px;
+  }
+  
+  .services h3 {
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .services ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .services li {
+    margin-bottom: 10px;
+    color: #666;
+  }
+  

@@ -1,0 +1,15 @@
+.my-form .form-group {
+    margin-bottom: 20px;
+}
+
+.my-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.text-danger {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
